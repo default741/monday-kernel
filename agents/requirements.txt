@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+neo4j
+chromadb
+pydantic
+pydantic-settings
+python-multipart

@@ -1,0 +1,28 @@
+services:
+  # The Knowledge Graph
+  neo4j:
+    image: neo4j:latest
+    container_name: monday_graph
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      - NEO4J_AUTH=neo4j/password123
+    volumes:
+      - ./data/neo4j:/data
+
+  # The Vector Memory
+  chroma:
+    image: chromadb/chroma:latest
+    container_name: monday_vectors
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data/chroma:/index_data
+
+  # Shared Cache
+  redis:
+    image: redis:alpine
+    container_name: monday_cache
+    ports:
+      - "6379:6379"

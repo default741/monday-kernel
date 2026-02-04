@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Rust
+target/
+**/*.rs.bk
+
+# .NET
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+.vs/
+
+# Databases & Models
+models/
+*.wav
+temp_live.wav
+data/
+neo4j/
+redis/
